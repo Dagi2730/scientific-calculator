@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="calculator">
+
+        <!-- 🌗 Theme Toggle -->
+        <label class="theme-toggle">
+            <input type="checkbox" id="themeSwitch" onchange="toggleTheme()" />
+            🌞 / 🌙
+        </label>
+
+        <!-- 📋 Display and Copy Button -->
+        <div class="display-wrapper">
+            <input type="text" id="display" readonly />
+        </div>
+
+        <!-- 🔢 Standard Buttons -->
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendValue('(')">(</button>
+            <button onclick="appendValue(')')">)</button>
+            <button onclick="deleteLast()">←</button>
+
+            <button onclick="appendValue('*')">×</button>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+
+            <button onclick="appendValue('+')">+</button>
+            <button onclick="appendValue('-')">−</button>
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('0')">0</button>
+
+            <button onclick="appendValue('/')">÷</button>
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="calculate()">=</button>
+        </div>
+
+        <!-- 📐 Scientific Mode Toggle -->
+        <button id="scientificToggleBtn" class="toggle-scientific" onclick="toggleScientific()">🧪 Scientific Mode</button>
+
+        <!-- 🔬 Scientific Buttons -->
+        <div class="scientific hidden sci-buttons">
+            <button onclick="appendFunc('sin')">sin</button>
+            <button onclick="appendFunc('cos')">cos</button>
+            <button onclick="appendFunc('tan')">tan</button>
+            <button onclick="appendFunc('log')">log</button>
+            <button onclick="appendFunc('ln')">ln</button>
+            <button onclick="appendFunc('sqrt')">√</button>
+            <button onclick="appendFunc('^2')">x²</button>
+            <button onclick="appendFunc('^')">xʸ</button>
+            <button onclick="appendFunc('pi')">π</button>
+            <button onclick="appendFunc('e')">e</button>
+            <button onclick="appendAns()">Ans</button>
+            <button onclick="toggleAngleUnit()">° / rad</button>
+        </div>
+
+        <!-- 🕘 History Section -->
+        <button class="history-toggle" onclick="toggleHistory()">🕘 Show History</button>
+        <div id="history" class="history hidden"></div>
+        <button onclick="clearHistory()" class="clear-history">🗑️ Clear History</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
