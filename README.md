@@ -22,6 +22,7 @@ Open the index.html file in your browser
 Start calculating!
 
 💻 Technologies Used
+
 HTML5
 
 CSS3
