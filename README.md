@@ -23,11 +23,11 @@ Start calculating!
 
 💻 Technologies Used
 
-HTML5
+- HTML5
 
-CSS3
+- CSS3
 
-JavaScript (ES6+)
+- JavaScript (ES6+)
 
 👤 Author
 
